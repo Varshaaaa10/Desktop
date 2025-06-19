@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Booth Result</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Booth Result</h2>
+    <div id="resultMessage" class="result"></div>
+  </div>
+
+  <script>
+    // Get the message from the URL
+    const params = new URLSearchParams(window.location.search);
+    const message = params.get("message");
+
+    // Display it
+    document.getElementById("resultMessage").textContent = message || "No result found.";
+  </script>
+</body>
+</html>
